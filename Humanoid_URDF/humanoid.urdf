@@ -1,0 +1,312 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="humanoid">
+
+    <!-- MATERIALS -->
+    <material name="grey">
+        <color rgba="0.7 0.7 0.7 1"/>
+    </material>
+
+    <material name="purple">
+        <color rgba="0.3 0 1 1"/>
+    </material>
+
+    <material name="orange">
+        <color rgba="0.9 0.2 0.0 1"/>
+    </material>
+
+    
+
+    <!--word link or base link-->
+    <link name="base_link"> 
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </link>
+
+
+
+    <!-- BODY -->
+    <link name="body_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/tisyasingh/Humanoid_UMass/Meshes/Humanoid_body.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_body_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="body_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- RIGHT SHOULDER -->
+
+    <link name="right_shoulder_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.3" length="1.3"/>
+            </geometry> 
+            <material name="purple"/>
+            <origin xyz="0.316 -0.2 -0.223" rpy="1.6 -0.641 0"/>
+        </visual>
+    </link>
+
+    <joint name="body_rshoulder_joint" type="continuous">
+        <axis xyz="-2.2 0 -1.6"/>
+        <parent link="body_link"/>
+        <child link="right_shoulder_link"/>
+        <origin xyz="1.63905504 0 1.98591568" rpy="0 0 0"/>
+    </joint>
+
+
+
+
+    <!-- LEFT SHOULDER -->
+    <link name="left_shoulder_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.3" length="1.3"/>
+            </geometry> 
+            <material name="purple"/>
+            <origin xyz="-0.316 -0.2 -0.223" rpy="1.6 0.641 0"/>
+        </visual>
+    </link>
+
+    <joint name="body_lshoulder_joint" type="continuous">
+        <axis xyz="-2.2 0 1.6"/>
+        <parent link="body_link"/>
+        <child link="left_shoulder_link"/>
+        <origin xyz="-1.63905504 0 1.98591568" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- RIGHT UPPER ARM-->
+    <link name="right_upper_arm_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.4" length="3"/>
+            </geometry>
+            <material name="grey"/>
+            <origin xyz="0.0 0.0 -0.8" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="r_uarm_shoulder_joint" type="revolute">
+        <axis xyz="0.0 1 0.0"/>
+        <limit lower="0" upper="-1.57" effort="100.0" velocity="10.0"/>
+        <parent link="right_shoulder_link"/>
+        <child link="right_upper_arm_link"/>
+        <origin xyz="0.35 -1.5 -0.225 " rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- LEFT UPPER ARM-->
+    <link name="left_upper_arm_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.4" length="3"/>
+            </geometry>
+            <material name="grey"/>
+            <origin xyz="0.0 0.0 -0.8" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="l_uarm_shoulder_joint" type="revolute">
+        <axis xyz="0.0 1 0.0"/>
+        <limit lower="0" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="left_shoulder_link"/>
+        <child link="left_upper_arm_link"/>
+        <origin xyz="-0.35 -1.5 -0.225 " rpy="0.0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- RIGHT FOREARM -->
+    <link name="right_forearm_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.38" length="2.4"/>
+            </geometry>
+            <material name="orange"/>
+            <origin xyz="0.0 0 -1.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <link name="right_forearm_pitch_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -1.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="r_forearm_uarm_joint_pitch" type="revolute">
+        <axis xyz="1 0.0 0.0"/>
+        <limit lower="-1.2" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="right_upper_arm_link"/>
+        <child link="right_forearm_pitch_link"/>
+        <origin xyz="0.0 0 -2.0" rpy="-1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="r_forearm_uarm_joint_roll" type="continuous">
+        <axis xyz="0.0 0 1"/>
+        <parent link="right_forearm_pitch_link"/>
+        <child link="right_forearm_link"/>
+        <origin xyz="0.0 0 0" rpy="0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- LEFT FOREARM -->
+    <link name="left_forearm_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.38" length="2.4"/>
+            </geometry>
+            <material name="orange"/>
+            <origin xyz="0.0 0 -1.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <link name="left_forearm_pitch_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -1.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="l_forearm_uarm_joint_pitch" type="revolute">
+        <axis xyz="1 0.0 0.0"/>
+        <limit lower="-1.2" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="left_upper_arm_link"/>
+        <child link="left_forearm_pitch_link"/>
+        <origin xyz="0.0 0 -2.0" rpy="-1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="l_forearm_uarm_joint_roll" type="continuous">
+        <axis xyz="0.0 0 1"/>
+        <parent link="left_forearm_pitch_link"/>
+        <child link="left_forearm_link"/>
+        <origin xyz="0.0 0 0" rpy="0 0.0 0.0"/>
+    </joint>
+
+
+
+    <!-- RIGHT WRIST -->
+    <link name="right_gripper_fingers_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/tisyasingh/Humanoid_UMass/Meshes/gripper_fingers.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <link name="right_gripper_fingers_pitch_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -2.8" rpy="-1.57 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="r_gripper_forearm_pitch_joint" type="revolute">
+        <axis xyz="1 0.0 0.0"/>
+        <limit lower="-1.57" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="right_forearm_link"/>
+        <child link="right_gripper_fingers_pitch_link"/>
+        <origin xyz="0 0.0 -2.8" rpy="-1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="r_gripper_forearm_roll_joint" type="revolute">
+        <axis xyz="0.0 0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="right_gripper_fingers_pitch_link"/>
+        <child link="right_gripper_fingers_link"/>
+        
+    </joint>
+
+
+
+    <!-- RIGHT GRIPPER -->
+    <link name="right_gripper_thumb_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/tisyasingh/Humanoid_UMass/Meshes/gripper_thumb.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="r_gripper_thumb_finger_joint" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="0.52" effort="100.0" velocity="10.0"/>
+        <parent link="right_gripper_fingers_link"/>
+        <child link="right_gripper_thumb_link"/>
+        <origin xyz="0.1 0 0.1" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+    <!-- LEFT WRIST -->
+    <link name="left_gripper_fingers_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/tisyasingh/Humanoid_UMass/Meshes/gripper_fingers.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.2" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <link name="left_gripper_fingers_pitch_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.01" length="0.01"/>
+            </geometry>
+            <origin xyz="0.0 0.0 -2.8" rpy="-1.57 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="l_gripper_forearm_pitch_joint" type="revolute">
+        <axis xyz="1 0.0 0.0"/>
+        <limit lower="-1.57" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="left_forearm_link"/>
+        <child link="left_gripper_fingers_pitch_link"/>
+        <origin xyz="0 0.0 -2.8" rpy="-1.57 0.0 0.0"/>
+    </joint>
+
+    <joint name="l_gripper_forearm_roll_joint" type="revolute">
+        <axis xyz="0.0 0 1.0"/>
+        <limit lower="-1.57" upper="1.57" effort="100.0" velocity="10.0"/>
+        <parent link="left_gripper_fingers_pitch_link"/>
+        <child link="left_gripper_fingers_link"/>
+        
+    </joint>
+
+
+
+    <!-- LEFT GRIPPER -->
+    <link name="left_gripper_thumb_link">
+        <visual>
+            <geometry>
+                <mesh filename="file:///home/tisyasingh/Humanoid_UMass/Meshes/gripper_thumb.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+        </visual>
+    </link>
+
+    <joint name="l_gripper_thumb_finger_joint" type="revolute">
+        <axis xyz="0 0 1"/>
+        <limit lower="-1.57" upper="0.52" effort="100.0" velocity="10.0"/>
+        <parent link="left_gripper_fingers_link"/>
+        <child link="left_gripper_thumb_link"/>
+        <origin xyz="0.1 0 0.1" rpy="0.0 0.0 0.0"/>
+    </joint>
+
+</robot>
