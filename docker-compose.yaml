@@ -1,0 +1,16 @@
+name: potato
+services:
+    ros:
+        stdin_open: true
+        tty: true
+        network_mode: host
+        devices:
+            - /dev/dri/
+        environment:
+            - DISPLAY=$DISPLAY
+        volumes:
+            - $HOME/.Xauthority:/root/.Xauthority:ro
+            - ./:/workspace
+        image: osrf/ros:humble-desktop
+        command: ros2 run demo_nodes_cpp talker
+
