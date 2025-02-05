@@ -1,9 +1,10 @@
-name: potato
+name: potato2
 services:
     ros:
         stdin_open: true
         tty: true
         network_mode: host
+        platform: linux/arm64/v8
         devices:
             - /dev/dri/
         environment:
@@ -11,6 +12,5 @@ services:
         volumes:
             - $HOME/.Xauthority:/root/.Xauthority:ro
             - ./:/workspace
-        image: osrf/ros:humble-desktop
-        command: ros2 run demo_nodes_cpp talker
+        image: arm64v8/ros:humble
 
