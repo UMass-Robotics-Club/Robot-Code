@@ -1,0 +1,6 @@
+to export displays:
+
+xhost + 
+
+in ros container:
+source ros
