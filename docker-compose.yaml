@@ -1,6 +1,8 @@
 name: potato2
 services:
     ros:
+        build:
+          ./.
         stdin_open: true
         tty: true
         network_mode: host
@@ -12,5 +14,8 @@ services:
         volumes:
             - $HOME/.Xauthority:/root/.Xauthority:ro
             - ./:/workspace
-        image: arm64v8/ros:humble
-
+              #image: arm64v8/ros:humble
+          #        entrypoint:
+  #          - "/ros_entrypoint.sh"
+  #      command:
+  #        - "/bin/sleep infinity"
