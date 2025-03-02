@@ -1,0 +1,47 @@
+syntax = "proto3";
+
+package robot_call;
+
+// Defines Service
+service RobotCall 
+{
+  // RPC to send a command to the robot
+  rpc SendInstructions (RobotCalling) returns (Response);
+}
+
+message RobotCalling 
+{
+  float shoulder_pitch_left = 1;
+
+  float shoulder_pitch_right = 2;
+
+  float bicep_left = 3;
+
+  float bicep_right = 4;
+
+  float shoulder_roll_left = 5;
+
+  float shoulder_roll_right = 6;
+
+  float forearm_roll_left = 7;
+
+  float forearm_roll_right = 8;
+
+  float wrist_flexion_left = 9;
+
+  float wrist_flexion_right = 10;
+
+  float wrist_yaw_left = 11;
+
+  float wrist_yaw_right = 12;
+
+  float gripper_left = 13;
+
+  float gripper_right = 14;
+}
+
+message Response 
+{
+  bool transmitted = 1;
+  string message = 2;
+}
