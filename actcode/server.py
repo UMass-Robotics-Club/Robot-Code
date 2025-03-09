@@ -6,6 +6,8 @@ import robot_call_pb2_grpc
 class RobotCallServicer(robot_call_pb2_grpc.RobotCallServicer):
     def SendInstructions(self, request, context):
         print(f"Received command with FOLLOWING: {request}")
+        for instruction in request.instructions:
+            print(instruction)
         return robot_call_pb2.Response(transmitted=True, message="Instructions received")
 
 def serve():
