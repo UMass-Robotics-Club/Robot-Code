@@ -6,8 +6,7 @@ import struct
 
 class RobotCallServicer(robot_call_pb2_grpc.RobotCallServicer):
     def SendInstructions(self, request, context):
-        print(f"Received command with FOLLOWING: {request}")
-            
+        print(f"Received command with FOLLOWING: {request}")    
         print([struct.pack('f', i) for i in request[0:6]])
         return robot_call_pb2.Response(transmitted=True, message="Instructions received")
 

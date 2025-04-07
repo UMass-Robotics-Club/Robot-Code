@@ -6,7 +6,7 @@ package robot_call;
 service RobotCall 
 {
   // RPC to send a command to the robot
-  rpc SendInstructions (RobotCalling) returns (Response);
+  rpc SendInstructions (stream RobotCalling) returns (Response);
 }
 
 message RobotCalling 

@@ -3,7 +3,7 @@ import robot_call_pb2
 import robot_call_pb2_grpc
 
 def run():
-    channel = grpc.insecure_channel("172.20.10.2:50051")
+    channel = grpc.insecure_channel("100.79.90.77:50051")
     stub = robot_call_pb2_grpc.RobotCallStub(channel)
     
     request = robot_call_pb2.RobotCalling(
@@ -16,7 +16,7 @@ def run():
 
         bicep_right = 4,
 
-        shoulder_roll_left = 5,
+        shoulder_roll_left = 335,
 
         shoulder_roll_right = 6,
 

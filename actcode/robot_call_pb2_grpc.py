@@ -35,7 +35,7 @@ class RobotCallStub(object):
         Args:
             channel: A grpc.Channel.
         """
-        self.SendInstructions = channel.unary_unary(
+        self.SendInstructions = channel.stream_unary(
                 '/robot_call.RobotCall/SendInstructions',
                 request_serializer=robot__call__pb2.RobotCalling.SerializeToString,
                 response_deserializer=robot__call__pb2.Response.FromString,
@@ -46,7 +46,7 @@ class RobotCallServicer(object):
     """Defines Service
     """
 
-    def SendInstructions(self, request, context):
+    def SendInstructions(self, request_iterator, context):
         """RPC to send a command to the robot
         """
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
@@ -56,7 +56,7 @@ class RobotCallServicer(object):
 
 def add_RobotCallServicer_to_server(servicer, server):
     rpc_method_handlers = {
-            'SendInstructions': grpc.unary_unary_rpc_method_handler(
+            'SendInstructions': grpc.stream_unary_rpc_method_handler(
                     servicer.SendInstructions,
                     request_deserializer=robot__call__pb2.RobotCalling.FromString,
                     response_serializer=robot__call__pb2.Response.SerializeToString,
@@ -74,7 +74,7 @@ class RobotCall(object):
     """
 
     @staticmethod
-    def SendInstructions(request,
+    def SendInstructions(request_iterator,
             target,
             options=(),
             channel_credentials=None,
@@ -84,8 +84,8 @@ class RobotCall(object):
             wait_for_ready=None,
             timeout=None,
             metadata=None):
-        return grpc.experimental.unary_unary(
-            request,
+        return grpc.experimental.stream_unary(
+            request_iterator,
             target,
             '/robot_call.RobotCall/SendInstructions',
             robot__call__pb2.RobotCalling.SerializeToString,
