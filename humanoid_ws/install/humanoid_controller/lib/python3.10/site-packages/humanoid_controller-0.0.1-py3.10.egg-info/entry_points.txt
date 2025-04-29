@@ -1,0 +1,3 @@
+[console_scripts]
+humanoid_controller = humanoid_controller.joint_controller:main
+

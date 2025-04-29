@@ -1,0 +1,50 @@
+[0.323s] Invoking command in '/home/tisyasingh/humanoid_ws/src/humanoid_controller': PYTHONPATH=/home/tisyasingh/humanoid_ws/build/humanoid_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/humanoid_controller build --build-base /home/tisyasingh/humanoid_ws/build/humanoid_controller/build install --record /home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log --single-version-externally-managed install_data
+[0.416s] running egg_info
+[0.416s] creating ../../build/humanoid_controller/humanoid_controller.egg-info
+[0.416s] writing ../../build/humanoid_controller/humanoid_controller.egg-info/PKG-INFO
+[0.416s] writing dependency_links to ../../build/humanoid_controller/humanoid_controller.egg-info/dependency_links.txt
+[0.416s] writing entry points to ../../build/humanoid_controller/humanoid_controller.egg-info/entry_points.txt
+[0.417s] writing requirements to ../../build/humanoid_controller/humanoid_controller.egg-info/requires.txt
+[0.417s] writing top-level names to ../../build/humanoid_controller/humanoid_controller.egg-info/top_level.txt
+[0.417s] writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+[0.418s] reading manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+[0.418s] writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+[0.418s] running build
+[0.418s] running build_py
+[0.418s] creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build
+[0.418s] creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib
+[0.418s] creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+[0.418s] copying humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+[0.418s] copying humanoid_controller/__init__.py -> /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+[0.418s] running install
+[0.419s] running install_lib
+[0.419s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+[0.419s] copying /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+[0.419s] copying /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller/__init__.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+[0.419s] byte-compiling /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller/joint_controller.py to joint_controller.cpython-310.pyc
+[0.419s] byte-compiling /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller/__init__.py to __init__.cpython-310.pyc
+[0.419s] running install_data
+[0.419s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index
+[0.419s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index
+[0.420s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index/packages
+[0.420s] copying resource/humanoid_controller -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index/packages
+[0.420s] copying package.xml -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller
+[0.420s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+[0.420s] copying launch/humanoid_launch.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+[0.420s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource
+[0.420s] copying resource/humanoid_meshes.urdf -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource
+[0.420s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.420s] copying resource/meshes/Elbow_URDF.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.421s] copying resource/meshes/ForeArmLink1.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.424s] copying resource/meshes/Base.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.496s] copying resource/meshes/Forearm_Joint2.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.496s] copying resource/meshes/ForeArm_joint_roll.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.497s] copying resource/meshes/Shoulder_pitch.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+[0.499s] creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/rviz
+[0.499s] copying rviz/humanoid.rviz -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/rviz
+[0.499s] running install_egg_info
+[0.500s] Copying ../../build/humanoid_controller/humanoid_controller.egg-info to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info
+[0.501s] running install_scripts
+[0.511s] Installing humanoid_controller script to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/humanoid_controller
+[0.511s] writing list of installed files to '/home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log'
+[0.521s] Invoked command in '/home/tisyasingh/humanoid_ws/src/humanoid_controller' returned '0': PYTHONPATH=/home/tisyasingh/humanoid_ws/build/humanoid_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/humanoid_controller build --build-base /home/tisyasingh/humanoid_ws/build/humanoid_controller/build install --record /home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log --single-version-externally-managed install_data
