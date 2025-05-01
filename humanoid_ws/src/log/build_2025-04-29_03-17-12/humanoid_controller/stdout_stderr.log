@@ -1,0 +1,21 @@
+running egg_info
+writing ../../build/humanoid_controller/humanoid_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/humanoid_controller/humanoid_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/humanoid_controller/humanoid_controller.egg-info/entry_points.txt
+writing requirements to ../../build/humanoid_controller/humanoid_controller.egg-info/requires.txt
+writing top-level names to ../../build/humanoid_controller/humanoid_controller.egg-info/top_level.txt
+reading manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+running install
+running install_lib
+running install_data
+copying launch/humanoid_launch.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+copying rviz/humanoid.rviz -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/rviz
+running install_egg_info
+removing '/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info' (and everything under it)
+Copying ../../build/humanoid_controller/humanoid_controller.egg-info to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info
+running install_scripts
+Installing humanoid_controller script to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/humanoid_controller
+writing list of installed files to '/home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log'

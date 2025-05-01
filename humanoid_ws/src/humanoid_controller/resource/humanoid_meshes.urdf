@@ -1,0 +1,251 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro" name="humanoid">
+
+
+    <!-- MATERIALS -->
+    <material name="grey">
+        <color rgba="0.7 0.7 0.7 1"/>
+    </material>
+
+
+    <!--word link or base link-->
+    <link name="base_link"> 
+        <origin xyz="0 0 0" rpy="0 0 0"/>
+    </link>
+
+
+    <!-- BODY -->
+    <link name="body_link">
+        <visual>
+            <geometry>
+                <cylinder radius="0.1" length="0.5"/>
+            </geometry>
+            <material name="grey"/>
+            <origin xyz="0 0 -0.25" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="base_body_joint" type="fixed">
+        <parent link="base_link"/>
+        <child link="body_link"/>
+        <origin xyz="0 0 0.5" rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- shoulder_base_joint_right -->
+    <link name="right_shoulder_base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Base.dae" scale="10 10 10"/>
+            </geometry> 
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_base_joint_right" type="fixed">
+        <parent link="body_link"/>
+        <child link="right_shoulder_base_link"/>
+        <origin xyz="0 -1.5 0" rpy="0 0 -1.5708"/>
+    </joint>
+
+
+    <!-- shoulder_roll_right_joint-->
+    <link name="right_shoulder_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Shoulder_pitch.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz=" 0.36230 -0.0007 -0.3878" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_roll_right_joint" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="right_shoulder_base_link"/>
+        <child link="right_shoulder_link"/>
+        <origin xyz="0 0 0.9432" rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- shoulder_pitch_right_joint-->
+    <link name="right_upper_arm_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Elbow_URDF.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0 0.36230 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_pitch_right_joint" type="continuous">
+        <axis xyz="0.0 1 0.0"/>
+        <parent link="right_shoulder_link"/>
+        <child link="right_upper_arm_link"/>
+        <origin xyz="1.3599 0 0" rpy="0 1.5708 -1.5708"/>
+    </joint>
+
+
+    <!-- bicep_right_joint-->
+    <link name="elbow_right_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/ForeArm_joint_roll.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.3193 -0.1 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="bicep_right_joint" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="right_upper_arm_link"/>
+        <child link="elbow_right_link"/>
+        <origin xyz="2.2072 0 0" rpy="3.14159 0 0"/>
+    </joint>
+
+
+    <!-- forearm_roll_right_joint-->
+    <link name="forearm_right_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/ForeArmLink1.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="forearm_roll_right_joint" type="continuous">
+        <axis xyz="1 0 0"/>
+        <parent link="elbow_right_link"/>
+        <child link="forearm_right_link"/>
+        <origin xyz="0.3193 -0.1 0" rpy="1.5708 0 0"/>
+    </joint>
+
+
+    <!-- wrist_flexion_right_joint-->
+    <link name="wrist_right_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Forearm_Joint2.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="-0.3850 0 -0.15" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="wrist_flexion_right_joint" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="forearm_right_link"/>
+        <child link="wrist_right_link"/>
+        <origin xyz="1.8496 0 0.016" rpy="0 0 0"/>
+    </joint>  
+
+
+    <!-- LEFT SIDE -->
+
+
+    <!-- shoulder_base_joint_left -->
+    <link name="left_shoulder_base_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Base.dae" scale="10 10 10"/>
+            </geometry> 
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_base_joint_left" type="fixed">
+        <parent link="body_link"/>
+        <child link="left_shoulder_base_link"/>
+        <origin xyz="0 1.5 0" rpy="0 0 1.5708"/>
+    </joint>
+
+
+    <!-- shoulder_roll_left_joint-->
+    <link name="left_shoulder_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Shoulder_pitch.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz=" 0.36230 -0.0007 -0.3878" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_roll_left_joint" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="left_shoulder_base_link"/>
+        <child link="left_shoulder_link"/>
+        <origin xyz="0 0 0.9432" rpy="0 0 0"/>
+    </joint>
+
+
+    <!-- shoulder_pitch_left_joint-->
+    <link name="left_upper_arm_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Elbow_URDF.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0 0.36230 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="shoulder_pitch_left_joint" type="continuous">
+        <axis xyz="0.0 1 0.0"/>
+        <parent link="left_shoulder_link"/>
+        <child link="left_upper_arm_link"/>
+        <origin xyz="1.3599 0 0" rpy="0 1.5708 -1.5708"/>
+    </joint>
+
+
+    <!-- bicep_left_joint-->
+    <link name="elbow_left_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/ForeArm_joint_roll.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0.3193 -0.1 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="bicep_left_joint" type="continuous">
+        <axis xyz="0 0 1"/>
+        <parent link="left_upper_arm_link"/>
+        <child link="elbow_left_link"/>
+        <origin xyz="2.2072 0 0" rpy="3.14159 0 0"/>
+    </joint>
+
+
+    <!-- forearm_roll_left_joint-->
+    <link name="forearm_left_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/ForeArmLink1.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="0 0 0" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="forearm_roll_left_joint" type="continuous">
+        <axis xyz="1 0 0"/>
+        <parent link="elbow_left_link"/>
+        <child link="forearm_left_link"/>
+        <origin xyz="0.3193 -0.1 0" rpy="1.5708 0 0"/>
+    </joint>
+
+
+    <!-- wrist_flexion_left_joint-->
+    <link name="wrist_left_link">
+        <visual>
+            <geometry>
+                <mesh filename="package://humanoid_controller/resource/meshes/Forearm_Joint2.dae" scale="10 10 10"/>
+            </geometry>
+            <origin xyz="-0.3850 0 -0.15" rpy="0 0 0"/>
+        </visual>
+    </link>
+
+    <joint name="wrist_flexion_left_joint" type="continuous">
+        <axis xyz="0 1 0"/>
+        <parent link="forearm_left_link"/>
+        <child link="wrist_left_link"/>
+        <origin xyz="1.8496 0 0.016" rpy="0 0 0"/>
+    </joint>  
+
+</robot>

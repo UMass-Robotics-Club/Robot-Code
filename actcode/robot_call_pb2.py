@@ -24,7 +24,7 @@ _sym_db = _symbol_database.Default()
 
 
 
-DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10robot_call.proto\x12\nrobot_call\"\xf9\x02\n\x0cRobotCalling\x12\x1b\n\x13shoulder_pitch_left\x18\x01 \x01(\x02\x12\x1c\n\x14shoulder_pitch_right\x18\x02 \x01(\x02\x12\x12\n\nbicep_left\x18\x03 \x01(\x02\x12\x13\n\x0b\x62icep_right\x18\x04 \x01(\x02\x12\x1a\n\x12shoulder_roll_left\x18\x05 \x01(\x02\x12\x1b\n\x13shoulder_roll_right\x18\x06 \x01(\x02\x12\x19\n\x11\x66orearm_roll_left\x18\x07 \x01(\x02\x12\x1a\n\x12\x66orearm_roll_right\x18\x08 \x01(\x02\x12\x1a\n\x12wrist_flexion_left\x18\t \x01(\x02\x12\x1b\n\x13wrist_flexion_right\x18\n \x01(\x02\x12\x16\n\x0ewrist_yaw_left\x18\x0b \x01(\x02\x12\x17\n\x0fwrist_yaw_right\x18\x0c \x01(\x02\x12\x14\n\x0cgripper_left\x18\r \x01(\x02\x12\x15\n\rgripper_right\x18\x0e \x01(\x02\"0\n\x08Response\x12\x13\n\x0btransmitted\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t2O\n\tRobotCall\x12\x42\n\x10SendInstructions\x12\x18.robot_call.RobotCalling\x1a\x14.robot_call.Responseb\x06proto3')
+DESCRIPTOR = _descriptor_pool.Default().AddSerializedFile(b'\n\x10robot_call.proto\x12\nrobot_call\"\xf9\x02\n\x0cRobotCalling\x12\x1b\n\x13shoulder_pitch_left\x18\x01 \x01(\x02\x12\x1c\n\x14shoulder_pitch_right\x18\x02 \x01(\x02\x12\x12\n\nbicep_left\x18\x03 \x01(\x02\x12\x13\n\x0b\x62icep_right\x18\x04 \x01(\x02\x12\x1a\n\x12shoulder_roll_left\x18\x05 \x01(\x02\x12\x1b\n\x13shoulder_roll_right\x18\x06 \x01(\x02\x12\x19\n\x11\x66orearm_roll_left\x18\x07 \x01(\x02\x12\x1a\n\x12\x66orearm_roll_right\x18\x08 \x01(\x02\x12\x1a\n\x12wrist_flexion_left\x18\t \x01(\x02\x12\x1b\n\x13wrist_flexion_right\x18\n \x01(\x02\x12\x16\n\x0ewrist_yaw_left\x18\x0b \x01(\x02\x12\x17\n\x0fwrist_yaw_right\x18\x0c \x01(\x02\x12\x14\n\x0cgripper_left\x18\r \x01(\x02\x12\x15\n\rgripper_right\x18\x0e \x01(\x02\"0\n\x08Response\x12\x13\n\x0btransmitted\x18\x01 \x01(\x08\x12\x0f\n\x07message\x18\x02 \x01(\t2Q\n\tRobotCall\x12\x44\n\x10SendInstructions\x12\x18.robot_call.RobotCalling\x1a\x14.robot_call.Response(\x01\x62\x06proto3')
 
 _globals = globals()
 _builder.BuildMessageAndEnumDescriptors(DESCRIPTOR, _globals)
@@ -36,5 +36,5 @@ if not _descriptor._USE_C_DESCRIPTORS:
   _globals['_RESPONSE']._serialized_start=412
   _globals['_RESPONSE']._serialized_end=460
   _globals['_ROBOTCALL']._serialized_start=462
-  _globals['_ROBOTCALL']._serialized_end=541
+  _globals['_ROBOTCALL']._serialized_end=543
 # @@protoc_insertion_point(module_scope)
