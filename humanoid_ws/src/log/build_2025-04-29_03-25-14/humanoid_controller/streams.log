@@ -1,0 +1,25 @@
+[0.408s] Invoking command in '/home/tisyasingh/humanoid_ws/src/humanoid_controller': PYTHONPATH=/home/tisyasingh/humanoid_ws/build/humanoid_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/humanoid_controller build --build-base /home/tisyasingh/humanoid_ws/build/humanoid_controller/build install --record /home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log --single-version-externally-managed install_data
+[0.503s] running egg_info
+[0.504s] writing ../../build/humanoid_controller/humanoid_controller.egg-info/PKG-INFO
+[0.505s] writing dependency_links to ../../build/humanoid_controller/humanoid_controller.egg-info/dependency_links.txt
+[0.505s] writing entry points to ../../build/humanoid_controller/humanoid_controller.egg-info/entry_points.txt
+[0.505s] writing requirements to ../../build/humanoid_controller/humanoid_controller.egg-info/requires.txt
+[0.505s] writing top-level names to ../../build/humanoid_controller/humanoid_controller.egg-info/top_level.txt
+[0.507s] reading manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+[0.507s] writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+[0.507s] running build
+[0.507s] running build_py
+[0.507s] copying humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+[0.508s] running install
+[0.508s] running install_lib
+[0.509s] copying /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+[0.509s] byte-compiling /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller/joint_controller.py to joint_controller.cpython-310.pyc
+[0.510s] running install_data
+[0.510s] copying launch/humanoid_launch.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+[0.510s] running install_egg_info
+[0.511s] removing '/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info' (and everything under it)
+[0.511s] Copying ../../build/humanoid_controller/humanoid_controller.egg-info to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info
+[0.512s] running install_scripts
+[0.520s] Installing humanoid_controller script to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/humanoid_controller
+[0.520s] writing list of installed files to '/home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log'
+[0.531s] Invoked command in '/home/tisyasingh/humanoid_ws/src/humanoid_controller' returned '0': PYTHONPATH=/home/tisyasingh/humanoid_ws/build/humanoid_controller/prefix_override:/usr/lib/python3/dist-packages/colcon_core/task/python/colcon_distutils_commands:/home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages:${PYTHONPATH} /usr/bin/python3 -W ignore:setup.py install is deprecated -W ignore:easy_install command is deprecated setup.py egg_info --egg-base ../../build/humanoid_controller build --build-base /home/tisyasingh/humanoid_ws/build/humanoid_controller/build install --record /home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log --single-version-externally-managed install_data

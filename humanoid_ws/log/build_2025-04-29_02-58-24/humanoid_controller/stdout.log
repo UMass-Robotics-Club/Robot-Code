@@ -1,0 +1,48 @@
+running egg_info
+creating ../../build/humanoid_controller/humanoid_controller.egg-info
+writing ../../build/humanoid_controller/humanoid_controller.egg-info/PKG-INFO
+writing dependency_links to ../../build/humanoid_controller/humanoid_controller.egg-info/dependency_links.txt
+writing entry points to ../../build/humanoid_controller/humanoid_controller.egg-info/entry_points.txt
+writing requirements to ../../build/humanoid_controller/humanoid_controller.egg-info/requires.txt
+writing top-level names to ../../build/humanoid_controller/humanoid_controller.egg-info/top_level.txt
+writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+reading manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+writing manifest file '../../build/humanoid_controller/humanoid_controller.egg-info/SOURCES.txt'
+running build
+running build_py
+creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build
+creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib
+creating /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+copying humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+copying humanoid_controller/__init__.py -> /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller
+running install
+running install_lib
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+copying /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller/joint_controller.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+copying /home/tisyasingh/humanoid_ws/build/humanoid_controller/build/lib/humanoid_controller/__init__.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller
+byte-compiling /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller/joint_controller.py to joint_controller.cpython-310.pyc
+byte-compiling /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller/__init__.py to __init__.cpython-310.pyc
+running install_data
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index/packages
+copying resource/humanoid_controller -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/ament_index/resource_index/packages
+copying package.xml -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+copying launch/humanoid_launch.py -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/launch
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource
+copying resource/humanoid_meshes.urdf -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/Elbow_URDF.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/ForeArmLink1.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/Base.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/Forearm_Joint2.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/ForeArm_joint_roll.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+copying resource/meshes/Shoulder_pitch.dae -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/resource/meshes
+creating /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/rviz
+copying rviz/humanoid.rviz -> /home/tisyasingh/humanoid_ws/install/humanoid_controller/share/humanoid_controller/rviz
+running install_egg_info
+Copying ../../build/humanoid_controller/humanoid_controller.egg-info to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/python3.10/site-packages/humanoid_controller-0.0.1-py3.10.egg-info
+running install_scripts
+Installing humanoid_controller script to /home/tisyasingh/humanoid_ws/install/humanoid_controller/lib/humanoid_controller
+writing list of installed files to '/home/tisyasingh/humanoid_ws/build/humanoid_controller/install.log'
